@@ -64,7 +64,9 @@ test('create watch', function (t) {
         t.ok(WATCH);
         WATCH.start(function (err) {
                 t.ifError(err);
-                t.end();
+                setTimeout(function () {
+                        t.end();
+                }, 500);
         });
 });
 
